@@ -16,7 +16,7 @@ export function ShoppingCart() {
     ]
 
     return (
-        <section className="mx-[13px] bg-[#F2F2F2] rounded-xl px-[18px] pt-[30px] pb-[6px] max-w-[383px]">
+        <section className="mx-[13px] bg-[#F2F2F2] rounded-xl px-[18px] pt-[30px] pb-[6px] sm:w-[383px]">
             {shoppingCart.map(({ title, price, discount, image }) => (
                 <Product key={title} title={title} price={price} discount={discount} image={image} />
             ))}
