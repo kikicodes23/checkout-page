@@ -1,4 +1,4 @@
-export function Input({ name, placeholder, children }) {
+export function Input({ name, placeholder, value, onChange, children, required}) {
     const nameInLowerCase = name.toLowerCase();
     
     return (
@@ -8,7 +8,7 @@ export function Input({ name, placeholder, children }) {
                 <figure className="absolute left-[16px] top-1/2 -translate-y-1/2 w-[18px]">
                     { children }
                 </figure>
-                <input  name={ nameInLowerCase } className="w-full border-[1px] py-3 pl-[42px] rounded-xl focus:outline-none text-xs font-semibold text-[#828282] md:text-base" placeholder={ placeholder }/>
+                <input value={value} onChange={onChange} id={ nameInLowerCase } className="w-full border-[1px] py-3 pl-[42px] rounded-xl focus:outline-[#F2994A] focus:placeholder:text-[#4F4F4F] text-xs font-semibold text-[#828282] md:text-base" placeholder={ placeholder } required={required}/>
             </div>
         </div>
     )

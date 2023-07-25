@@ -1,3 +1,7 @@
+"use client";
+
+import React from "react";
+
 import { Product } from "@/components/Product.jsx";
 import { Resume } from "@/components/Resume.jsx";
 import photo1 from "@/public/img/photo1.png"
@@ -5,9 +9,12 @@ import photo2 from "@/public/img/photo2.png"
 
 export function ShoppingCart() {
 
+    const [newPrice, setNewPrice] = React.useState(0);
+
+
     const shoppingCart = [
-        { title: "Vintage Backbag", price: "$54.99", discount: "$94.99", image: photo1 },
-        { title: "Levi Shoes", price: "$74.99", discount: "$124.99", image: photo2 }
+        { title: "Vintage Backbag", price: 54.99, discount: 94.99, image: photo1 },
+        { title: "Levi Shoes", price: 74.99, discount: 124.99, image: photo2 }
     ]
 
     const resume = [
